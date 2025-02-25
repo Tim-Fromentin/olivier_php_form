@@ -9,8 +9,14 @@
 </head>
 <body>
 <?php
+// j'affiche la liste des message et si aucun message n'est stocker j'echo un message d'erreur
 $homepage = file_get_contents('message.txt');
-echo $homepage;
+if ($homepage){
+    echo $homepage;
+} else {
+    echo 'Pas encore de message';
+}
+
 ?>
 </body>
 </html>
